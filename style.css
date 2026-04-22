@@ -45,21 +45,7 @@ div{
     border-radius:10px;
     text-align:center;
     margin:auto;
-}
-a{
-    display:inline-block;
-    color:rgb(64,129,243);
-    margin:15px 0px;
-}
-#new{
-    margin-top:10px;
-    background-color: rgb(50,180,50);
-    width:auto;
-    padding:0 15px;
-}     
-hr{
-    color:rgb(210,210,210);
-}
+}   
 h2{
     font-size:20px;
     margin-bottom:15px;
@@ -71,12 +57,4 @@ img{
 }
 body,input,button,a{
     font-family:Helvetica, Arial, sans-serif
-}
-#err1,#err2{
-    color:red;
-    text-align:right;
-    position:relative;
-    bottom:8px;
-    display:none;
-    font-size:15px;
 }
